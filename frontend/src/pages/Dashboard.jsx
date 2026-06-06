@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
-import TripForm from "../components/TripForm";
+import TripForm from "../Components/TripForm";
 import TripTable from "../Components/Triptable";
 
 const Dashboard = () => {
