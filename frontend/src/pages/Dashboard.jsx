@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
 import TripForm from "../components/TripForm";
-import TripTable from "../components/TripTable";
+import TripTable from "../Components/Triptable";
 
 const Dashboard = () => {
   const [trips, setTrips] = useState([]);
