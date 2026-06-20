@@ -47,7 +47,7 @@ const Dashboard = () => {
   );
 
   const totalCost = trips.reduce(
-    (sum, trip) => sum + Number(trip.totalCost),
+    (sum, trip) => sum + (parseFloat(trip.totalCost) || 0),
     0
   );
 

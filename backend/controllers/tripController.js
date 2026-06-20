@@ -19,15 +19,18 @@ const createTrip = async (req, res) => {
       fuelCost,
     } = req.body;
 
-    const totalCost =
-      Number(tollCost) + Number(fuelCost);
+    const parsedDistance = parseFloat(distance) || 0;
+    const parsedTollCost = parseFloat(tollCost) || 0;
+    const parsedFuelCost = parseFloat(fuelCost) || 0;
+
+    const totalCost = parsedTollCost + parsedFuelCost;
 
     const trip = await Trip.create({
       source,
       destination,
-      distance,
-      tollCost,
-      fuelCost,
+      distance: parsedDistance,
+      tollCost: parsedTollCost,
+      fuelCost: parsedFuelCost,
       totalCost,
     });
 

@@ -13,6 +13,7 @@ const TripForm = ({ addTrip }) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
+
     });
   };
 
@@ -51,24 +52,30 @@ const TripForm = ({ addTrip }) => {
       />
 
       <input
+        type="number"
         name="distance"
         placeholder="Distance"
         value={form.distance}
         onChange={handleChange}
+        step="0.01"
       />
 
       <input
+        type="number"
         name="tollCost"
         placeholder="Toll Cost"
         value={form.tollCost}
         onChange={handleChange}
+        step="0.01"
       />
 
       <input
+        type="number"
         name="fuelCost"
         placeholder="Fuel Cost"
         value={form.fuelCost}
         onChange={handleChange}
+        step="0.01"
       />
 
       <button type="submit">Add Trip</button>
